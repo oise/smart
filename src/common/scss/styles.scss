@@ -1,0 +1,212 @@
+@use 'colours';
+@use "variables";
+@import 'normalize.css/normalize.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: variables.$body-color;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+.h1 {
+  color: variables.$heading-color;
+  font-weight: 500;
+  font-size: variables.$heading-1-size;
+  line-height: variables.$heading-1-size;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$body-color;
+}
+
+.form-header {
+  font-size: 36px;
+  margin-bottom: 48px;
+}
+
+.form-group {
+  font-size: 13px;
+  height: 65px;
+  //border: 1px solid colours.$medium-gray;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  //outline: colours.$dark-gray;
+  margin-bottom: 24px;
+  transition: border-color 500ms linear;
+
+  .form-control {
+    border: none;
+    height: 20px;
+    padding: 0;
+    //color: colours.$font-color;
+    width: 100%;
+    line-height: 20px;
+    transition: border 200ms linear;
+
+    &::placeholder {
+      opacity: 0.7;
+    }
+
+    &:focus, &:active {
+      outline: none;
+      border-color: colours.$primary;
+    }
+  }
+
+  &.error {
+    border-color: colours.$red;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cdefs/%3E%3Cpath fill='%23545F7D' fill-rule='evenodd' d='M5.2 5.2l3.7-4-3.7 4z' clip-rule='evenodd'/%3E%3Cpath stroke='%23545F7D' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5.2 5.2l3.7-4'/%3E%3Cpath fill='%23545F7D' fill-rule='evenodd' d='M4.9 5.2l-3.7-4 3.7 4z' clip-rule='evenodd'/%3E%3Cpath stroke='%23545F7D' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4.9 5.2l-3.7-4'/%3E%3C/svg%3E") #fff no-repeat right 0.75rem center;
+  background-size: 8px 10px;
+}
+
+label {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  //color: colours.$font-color;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.form-error {
+  display: block;
+  color: colours.$red;
+  font-size: 12px;
+  position: relative;
+  top: -23px;
+}
+
+
+//BUTTONS
+.button {
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  min-width: 140px;
+  height: 60px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+
+  &-fluid {
+    width: 100%;
+  }
+
+  &-primary {
+    background-color: colours.$primary;
+    color: #fff;
+  }
+
+  &-secondary {
+    background-color: colours.$secondary;
+    color: #fff;
+  }
+}
+
+//Page
+.page {
+  &-wrapper {
+   // padding: 0px 24px 24px variables.$sidebar-width;
+
+    @media screen and (max-width: 1024px) {
+      padding: 100px 30px 10px;
+      .h2 {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+
+//TABLES
+.table {
+  &-header {
+    //color: colours.$font-color;
+    padding: 14px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 90%;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    };
+  }
+
+  &-body {
+    min-height: 600px;
+
+    .table-row {
+      width: 100%;
+      border-radius: 5px;
+      align-items: center;
+      height: 64px;
+      line-height: 64px;
+      padding: 0 16px;
+
+      .table-item {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 2px;
+        position: relative;
+
+        .featured {
+          display: inline-block;
+          color: colours.$secondary;
+          width: 20px;
+          position: relative;
+          top: 1px;
+        }
+
+        &.no-overflow {
+          overflow: unset;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
