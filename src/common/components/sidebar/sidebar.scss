@@ -1,8 +1,9 @@
 @use 'src/common/scss/colours';
+@use 'src/common/scss/variables';
 
 .sidebar {
   &-container {
-    width: 102px;
+    width: variables.$sidebar-width;
     border-right: 1px solid colours.$gray-200;
     position: fixed;
     height: calc(100vh - 80px);

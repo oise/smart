@@ -17,9 +17,9 @@
     "jsx": "react-jsx",
     "paths": {
       "@common/*": ["./src/common/*"],
-      "@assets/*": ["./src/assets/*"],
+      "@assets/*": ["./src/assets/*"]
     },
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite-plugin-svgr/client"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
