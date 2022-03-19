@@ -19,7 +19,6 @@
       "@common/*": ["./src/common/*"],
       "@assets/*": ["./src/assets/*"]
     },
-    "types": ["vite-plugin-svgr/client"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
