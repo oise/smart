@@ -58,7 +58,6 @@ a {
   color: colours.$secondary;
 }
 
-
 //FORMS
 .form-group {
   font-size: 13px;
@@ -201,12 +200,11 @@ a {
   }
 }
 
-
 //PAGE LAYOUT
 .layout {
   &-page {
     display: flex;
-    flex:1;
+    flex: 1;
     margin-left: variables.$sidebar-width;
     padding: 0 32px;
     &-content {

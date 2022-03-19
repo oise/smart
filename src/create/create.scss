@@ -26,7 +26,8 @@
       color: colours.$gray-300;
       transition: color 250ms ease-in-out;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: colours.$secondary;
       }
     }
