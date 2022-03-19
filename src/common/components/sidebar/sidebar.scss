@@ -4,10 +4,10 @@
 .sidebar {
   &-container {
     width: variables.$sidebar-width;
-    border-right: 1px solid colours.$gray-200;
+    border-right: 2px solid colours.$gray-200;
     position: fixed;
     height: calc(100vh - 80px);
     margin: 40px 0;
-    padding: 16px 32px;
+    padding: 0 32px;
   }
 }

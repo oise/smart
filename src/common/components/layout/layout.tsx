@@ -1,14 +1,14 @@
-import { Outlet } from 'react-router-dom';
-import { Sidebar } from '@common/components/sidebar';
 import './layout.scss';
+import { Outlet } from 'react-router-dom';
+import Sidebar from '@common/components/sidebar';
 
 export const Layout = () => {
   return (
     <>
       <Sidebar />
-      <div className='layout-page'>
+      <main className='layout-page'>
         <Outlet />
-      </div>
+      </main>
     </>
   );
 };

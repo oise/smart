@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from '@common/components/layout';
 import { lazy, Suspense } from 'react';
 
-const Login = lazy(() => import('./login'));
+const Login = lazy(() => import('./auth/login'));
+const Signup = lazy(() => import('./auth/signup'));
 
 function App() {
   return (
@@ -15,6 +16,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <Login />
+              </Suspense>
+            }
+          />
+          <Route
+            path='/signup'
+            element={
+              <Suspense fallback={null}>
+                <Signup />
               </Suspense>
             }
           />

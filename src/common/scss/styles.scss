@@ -21,6 +21,31 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
+@font-face {
+  font-family: 'icon';
+  src: url('src/assets/icons.woff?qarst1') format('woff'),
+  url('src/assets/icons.woff2?qarst1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icon' !important;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-saved-videos:before {
+  content: "\e900";
+}
+
+.icon-select-video:before {
+  content: "\e901";
+}
+
 h1,
 .h1 {
   color: variables.$heading-color;
@@ -31,70 +56,49 @@ h1,
 
 a {
   text-decoration: none;
-  color: variables.$body-color;
-}
-
-.form-header {
-  font-size: 36px;
-  margin-bottom: 48px;
+  color: colours.$secondary;
 }
 
 .form-group {
   font-size: 13px;
-  height: 65px;
-  //border: 1px solid colours.$medium-gray;
-  border-radius: 5px;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  //outline: colours.$dark-gray;
-  margin-bottom: 24px;
-  transition: border-color 500ms linear;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+  }
 
   .form-control {
-    border: none;
-    height: 20px;
-    padding: 0;
-    //color: colours.$font-color;
+    border: 1px solid colours.$gray-300;
+    height: 40px;
+    padding: 0 16px;
+    color: colours.$gray-500;
     width: 100%;
     line-height: 20px;
     transition: border 200ms linear;
+    border-radius: 6px;
+    margin-top: 6px;
 
     &::placeholder {
-      opacity: 0.7;
+      opacity: 0.4;
     }
 
     &:focus,
     &:active {
       outline: none;
-      border-color: colours.$primary;
+      border-color: colours.$secondary;
     }
   }
+
 
   &.error {
     border-color: colours.$red;
   }
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cdefs/%3E%3Cpath fill='%23545F7D' fill-rule='evenodd' d='M5.2 5.2l3.7-4-3.7 4z' clip-rule='evenodd'/%3E%3Cpath stroke='%23545F7D' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5.2 5.2l3.7-4'/%3E%3Cpath fill='%23545F7D' fill-rule='evenodd' d='M4.9 5.2l-3.7-4 3.7 4z' clip-rule='evenodd'/%3E%3Cpath stroke='%23545F7D' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4.9 5.2l-3.7-4'/%3E%3C/svg%3E")
-    #fff no-repeat right 0.75rem center;
-  background-size: 8px 10px;
-}
-
-label {
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  //color: colours.$font-color;
-  margin-bottom: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .form-error {
   display: block;
@@ -114,12 +118,10 @@ label {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  min-width: 140px;
-  height: 60px;
+  font-size: 14px;
+  transition: background-color 200ms ease-in-out;
+  min-width: 40px;
+  height: 33px;
   border-radius: 6px;
   cursor: pointer;
   outline: none;
@@ -131,6 +133,10 @@ label {
   &-primary {
     background-color: colours.$primary;
     color: #fff;
+
+    &:hover {
+      background-color: darken(colours.$primary, 10);
+    }
   }
 
   &-secondary {

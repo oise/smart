@@ -1,0 +1,56 @@
+@use "src/common/scss/colours";
+
+.auth {
+  &-background {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width:400px;
+      height: 400px;
+      right:0;
+      top:0;
+      opacity: 0.2;
+      background: url("src/assets/auth-image.svg") no-repeat;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &-form {
+    position: absolute;
+    width: 400px;
+    min-height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    > button {
+      width: 78px;
+    }
+  }
+
+  &-meta {
+    display: flex;
+    margin-top: 64px;
+    font-size: 13px;
+    color: colours.$gray-500;
+    justify-content: center;
+    font-weight: 500;
+
+    > a {
+      padding-left: 4px;
+    }
+  }
+}
