@@ -1,14 +1,15 @@
 @use 'src/common/scss/colours';
+@use 'src/common/scss/variables';
 
 .header {
   &-container {
-    width: 100%;
+    width: calc(100% - variables.$sidebar-width - 64px);
     position: fixed;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 104px;
-    margin: 0 32px;
-    .border {
+    &.border {
       border-bottom: 2px solid colours.$gray-200;
     }
   }

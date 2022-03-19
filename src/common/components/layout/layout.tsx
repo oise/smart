@@ -1,4 +1,3 @@
-import './layout.scss';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '@common/components/sidebar';
 

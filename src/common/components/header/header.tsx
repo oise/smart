@@ -7,7 +7,7 @@ interface HeaderProps {
   heading: string;
 }
 
-const Header: FC<HeaderProps> = ({ children, showBorder, heading }) => {
+const Header: FC<HeaderProps> = ({ children, showBorder = true, heading }) => {
   const classes = classNames('header-container', {
     border: showBorder
   });

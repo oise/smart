@@ -58,6 +58,8 @@ a {
   color: colours.$secondary;
 }
 
+
+//FORMS
 .form-group {
   font-size: 13px;
   display: flex;
@@ -116,16 +118,13 @@ a {
   background-color: transparent;
   border: 1px solid transparent;
   font-size: 14px;
+  padding: 6px 20px;
   transition: background-color 200ms ease-in-out;
   min-width: 40px;
   height: 33px;
   border-radius: 6px;
   cursor: pointer;
   outline: none;
-
-  &-fluid {
-    width: 100%;
-  }
 
   &-primary {
     background-color: colours.$primary;
@@ -139,19 +138,16 @@ a {
   &-secondary {
     background-color: colours.$secondary;
     color: #fff;
+    &:hover {
+      background-color: darken(colours.$secondary, 10);
+    }
   }
-}
 
-//Page
-.page {
-  &-wrapper {
-    // padding: 0px 24px 24px variables.$sidebar-width;
-
-    @media screen and (max-width: 1024px) {
-      padding: 100px 30px 10px;
-      .h2 {
-        margin-bottom: 24px;
-      }
+  &-neutral {
+    background-color: colours.$gray-100;
+    color: colours.$gray-300;
+    &:hover {
+      background-color: darken(colours.$gray-100, 10);
     }
   }
 }
@@ -201,6 +197,21 @@ a {
           overflow: unset;
         }
       }
+    }
+  }
+}
+
+
+//PAGE LAYOUT
+.layout {
+  &-page {
+    display: flex;
+    flex:1;
+    margin-left: variables.$sidebar-width;
+    padding: 0 32px;
+    &-content {
+      display: flex;
+      padding-top: 132px;
     }
   }
 }

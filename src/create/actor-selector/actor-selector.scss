@@ -1,0 +1,21 @@
+@use "src/common/scss/colours";
+
+.actor {
+  &-items {
+    display: flex;
+    column-gap: 11px;
+  }
+
+  &-item {
+    width: 150px;
+    height: 84px;
+    border-radius: 6px;
+    border: 1px solid colours.$gray-200;
+    overflow: hidden;
+    transition: border 200ms linear;
+    cursor: pointer;
+    &:hover, &.active {
+      border-color: colours.$secondary;
+    }
+  }
+}

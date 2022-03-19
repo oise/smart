@@ -1,0 +1,17 @@
+@use 'src/common/scss/colours';
+
+.tag {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: colours.$gray-300;
+    font-size: 12px;
+    height: 20px;
+    padding: 3px 13px;
+    border-radius: 6px;
+    border:1px solid  colours.$gray-300;
+  }
+}
+
+
