@@ -1,0 +1,15 @@
+@use 'src/common/scss/colours';
+
+.header {
+  &-container {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 104px;
+    margin: 0 32px;
+    .border {
+      border-bottom: 2px solid colours.$gray-200;
+    }
+  }
+}

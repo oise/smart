@@ -21,17 +21,16 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
 @font-face {
   font-family: 'icon';
-  src: url('src/assets/icons.woff?qarst1') format('woff'),
-  url('src/assets/icons.woff2?qarst1') format('woff');
+  src: url('src/assets/icons.woff?qarst1') format('woff'), url('src/assets/icons.woff2?qarst1') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   font-family: 'icon' !important;
   speak: never;
   -webkit-font-smoothing: antialiased;
@@ -39,11 +38,11 @@ body {
 }
 
 .icon-saved-videos:before {
-  content: "\e900";
+  content: '\e900';
 }
 
 .icon-select-video:before {
-  content: "\e901";
+  content: '\e901';
 }
 
 h1,
@@ -93,12 +92,10 @@ a {
     }
   }
 
-
   &.error {
     border-color: colours.$red;
   }
 }
-
 
 .form-error {
   display: block;

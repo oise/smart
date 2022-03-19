@@ -1,13 +1,18 @@
 import './sidebar.scss';
 import logo from '@assets/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Sidebar = (): JSX.Element => {
   return (
     <div className='sidebar-container'>
-      <img src={logo} alt='Logo' />
+      <img className='sidebar-logo' src={logo} alt='Logo' />
       <nav className='sidebar-menu'>
-        <div className='icon-saved-videos'></div>
-        <div className='icon-'></div>
+        <Link to={'/'} className='sidebar-menu-item'>
+          <span className='icon-select-video' />
+        </Link>
+        <Link to={'browse'} className='sidebar-menu-item'>
+          <span className='icon-saved-videos' />
+        </Link>
       </nav>
     </div>
   );

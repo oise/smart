@@ -1,17 +1,17 @@
-@use "src/common/scss/colours";
+@use 'src/common/scss/colours';
 
 .auth {
   &-background {
     position: relative;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
-      width:400px;
+      width: 400px;
       height: 400px;
-      right:0;
-      top:0;
+      right: 0;
+      top: 0;
       opacity: 0.2;
-      background: url("src/assets/auth-image.svg") no-repeat;
+      background: url('src/assets/auth-image.svg') no-repeat;
     }
   }
 
