@@ -1,12 +1,14 @@
 export class DataService {
+  private baseUrl = 'https://cdn.jsdelivr.net/gh/oise/smart@latest/';
+
   async get<Type>(url: string): Promise<Type> {
-    return fetch(url, {
+    return fetch(`${this.baseUrl}${url}`, {
       method: 'GET'
     }).then(this.processResponse);
   }
 
   async post<Type>(url: string, body: any): Promise<Type> {
-    return fetch(url, {
+    return fetch(`${this.baseUrl}${url}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
@@ -15,8 +17,7 @@ export class DataService {
 
   private async processResponse(response: Response) {
     if (response.ok) {
-      const resp = await response.json();
-      return resp;
+      return await response.json();
     } else {
       const error = await response.json();
       return Promise.reject(error);

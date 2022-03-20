@@ -22,7 +22,10 @@ const ActorSelector = () => {
     <div className='actor-items'>
       {actors?.map((actor) => (
         <div className='actor-item' key={'actor.name'}>
-          {actor.name}
+          <figure className='actor-item-image'>
+            <img src={actor.thumbnailUrl} width={'150px'} />
+          </figure>
+          <div className='actor-item-title'>{actor.name}</div>
         </div>
       ))}
     </div>

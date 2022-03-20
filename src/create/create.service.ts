@@ -9,7 +9,7 @@ class CreateService {
   }
 
   async actors() {
-    return this.dataService.get<Actor[]>('https://cdn.jsdelivr.net/gh/oise/smart@main/data/actor.json');
+    return this.dataService.get<Actor[]>('data/actor.json');
   }
 }
 

@@ -10,6 +10,7 @@
   }
 
   &-nav {
+    width: 600px;
     margin-left: 40px;
     flex: 1;
     display: flex;
@@ -18,7 +19,7 @@
     &-items {
       display: flex;
       font-weight: 500;
-      column-gap: 30px;
+      column-gap: 12px;
       margin-bottom: 30px;
     }
     &-item {
