@@ -13,7 +13,8 @@
     cursor: pointer;
     transition: border-color 200ms ease-in-out, background-color 200ms ease-in-out;
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       background-color: lighten(colours.$secondary, 50);
       border-color: colours.$secondary;
     }
@@ -63,5 +64,4 @@
       transition: width 200ms linear;
     }
   }
-
 }
