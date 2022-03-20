@@ -7,6 +7,8 @@ import { CreateSelectorProvider } from './create-selector-provider';
 import { useState } from 'react';
 import classNames from 'classnames';
 import VoiceSelector from './voice-selector';
+import AlignmentSelector from './alignment-selector';
+import BackgroundSelector from './background-selector';
 
 type Menu = 'actor' | 'voice' | 'alignment' | 'background';
 
@@ -43,6 +45,8 @@ const Create = () => {
           <CreateSelectorProvider>
             {selectedMenu === 'actor' && <ActorSelector />}
             {selectedMenu === 'voice' && <VoiceSelector />}
+            {selectedMenu === 'alignment' && <AlignmentSelector />}
+            {selectedMenu === 'background' && <BackgroundSelector />}
           </CreateSelectorProvider>
         </div>
       </div>
