@@ -1,5 +1,7 @@
+import VoicePlayer from './voice-player';
+
 const VoiceSelector = () => {
-  return <div>Voice Selector</div>;
+  return <VoicePlayer />;
 };
 
 export default VoiceSelector;
