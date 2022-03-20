@@ -1,8 +1,7 @@
 export class DataService {
   async get<Type>(url: string): Promise<Type> {
     return fetch(url, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
+      method: 'GET'
     }).then(this.processResponse);
   }
 
@@ -17,7 +16,7 @@ export class DataService {
   private async processResponse(response: Response) {
     if (response.ok) {
       const resp = await response.json();
-      return resp.data;
+      return resp;
     } else {
       const error = await response.json();
       return Promise.reject(error);
