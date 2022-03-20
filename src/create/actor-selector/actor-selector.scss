@@ -23,6 +23,7 @@
       transition: border 200ms linear;
       cursor: pointer;
       overflow: hidden;
+
       > img {
         width: 100%;
       }
@@ -33,14 +34,13 @@
       font-size: 12px;
     }
 
-    &:hover,
-    &.active {
-      > &-image {
-        border-color: colours.$secondary;
-      }
-      > &-title {
-        color: colours.$secondary;
-      }
+    &:hover > &-image, &.active > &-image {
+      border-color: colours.$secondary;
+    }
+
+    &:hover > &-title, &.active > &-title {
+      color: colours.$secondary;
     }
   }
+
 }

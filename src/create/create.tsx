@@ -3,6 +3,7 @@ import Header from '@common/components/header';
 import Preview from './preview';
 import ScriptBox from './script-box';
 import ActorSelector from './actor-selector';
+import { CreateSelectorProvider } from './create-selector-provider';
 
 const Create = () => {
   return (
@@ -22,7 +23,9 @@ const Create = () => {
             <div className='create-nav-item'>Alignment</div>
             <div className='create-nav-item'>Background</div>
           </nav>
-          <ActorSelector />
+          <CreateSelectorProvider>
+            <ActorSelector />
+          </CreateSelectorProvider>
         </div>
       </div>
     </>
