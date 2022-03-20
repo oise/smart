@@ -1,0 +1,67 @@
+@use 'src/common/scss/colours';
+
+.voice-player {
+  &-container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: colours.$gray-200;
+    border: 1px solid colours.$gray-200;
+    cursor: pointer;
+    transition: border-color 200ms ease-in-out, background-color 200ms ease-in-out;
+
+    &.active,
+    &:hover {
+      background-color: lighten(colours.$secondary, 50);
+      border-color: colours.$secondary;
+    }
+  }
+
+  &-play-pause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 18px;
+    background-color: colours.$gray-300;
+
+    &.playing {
+      background-color: colours.$secondary;
+    }
+
+    > .play {
+      width: 20px;
+    }
+
+    > .pause {
+      width: 13px;
+    }
+  }
+
+  &-name {
+    position: absolute;
+    font-size: 12px;
+  }
+
+  &-sound-graph {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    background: url('src/assets/sound.svg') no-repeat left center;
+
+    &-progress {
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      left: 0;
+      mix-blend-mode: overlay;
+      background-color: colours.$secondary;
+      transition: width 200ms linear;
+    }
+  }
+}

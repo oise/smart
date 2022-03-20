@@ -213,3 +213,16 @@ a {
     }
   }
 }
+
+//HELPER
+
+.flex {
+  display: flex;
+  flex: 1;
+  &.column {
+    flex-direction: column;
+  }
+  &.row {
+    flex-direction: row;
+  }
+}

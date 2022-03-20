@@ -3,6 +3,7 @@ import { createContext, FC, useContext, useState } from 'react';
 export interface SelectedPreview {
   actorImage?: string;
   alignment?: 'left' | 'right' | 'center';
+  voice: 'string';
   background?: {
     type: 'image' | 'colour' | 'video';
     value: string;
