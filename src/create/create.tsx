@@ -13,7 +13,7 @@ const Create = () => {
       </Header>
       <div className='layout-page-content'>
         <div className='create-content'>
-          <Preview actorImage={''} alignment={'center'} background={{ type: 'video', value: '' }} />
+          <Preview />
           <ScriptBox />
         </div>
         <div className='create-nav'>

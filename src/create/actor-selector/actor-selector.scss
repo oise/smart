@@ -34,13 +34,14 @@
       font-size: 12px;
     }
 
-    &:hover > &-image, &.active > &-image {
+    &:hover > &-image,
+    &.active > &-image {
       border-color: colours.$secondary;
     }
 
-    &:hover > &-title, &.active > &-title {
+    &:hover > &-title,
+    &.active > &-title {
       color: colours.$secondary;
     }
   }
-
 }

@@ -26,8 +26,6 @@ const ActorSelector = () => {
     setSelectedUrl(actor.url);
   };
 
-  console.log(selectedValues);
-
   const actorItemClasses = classNames('actor-item', { active: selectedValues?.actorImage === selectedUrl });
 
   return (
