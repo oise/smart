@@ -28,8 +28,8 @@ const VoiceSelector = () => {
   return (
     <div className='voice-items'>
       {voices?.map((voice) => (
-        <div className={`voice-item ${voice.name === selectedValues?.voice ? 'active' : ''}`} key={voice.name} onClick={() => selectVoice(voice)}>
-          <VoicePlayer name={voice.name} sample={voice.sample} />
+        <div className='voice-item' key={voice.name}>
+          <VoicePlayer name={voice.name} sample={voice.sample} isSelected={voice.name === selectedValues?.voice} onClick={() => selectVoice(voice)} />
         </div>
       ))}
     </div>

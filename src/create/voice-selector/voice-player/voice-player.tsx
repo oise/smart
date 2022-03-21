@@ -1,11 +1,13 @@
 import './voice-player.scss';
 import play from '/src/assets/play.svg';
 import pause from '/src/assets/pause.svg';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, VFC } from 'react';
 import { Voice } from '@common/models/Voice';
 import classNames from 'classnames';
 
-const VoicePlayer = ({ sample, name }: Voice) => {
+type VoicePlayerProps = Voice & { isSelected: boolean } & { [key: string]: any };
+
+const VoicePlayer: VFC<VoicePlayerProps> = ({ sample, name, isSelected, ...rest }) => {
   const [progress, setProgress] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
@@ -43,16 +45,19 @@ const VoicePlayer = ({ sample, name }: Voice) => {
     }
 
     return () => {
-      audio.current.removeEventListener('loadeddata', voiceLoadHandler);
-      audio.current.removeEventListener('ended', voiceEndedHandler);
+      if (audio.current) {
+        audio.current.removeEventListener('loadeddata', voiceLoadHandler);
+        audio.current.removeEventListener('ended', voiceEndedHandler);
+      }
       clearInterval(timer);
     };
   }, []);
 
   const playPauseClasses = classNames('voice-player-play-pause', { playing: isPlaying });
+  const voicePlayerContainerClasses = classNames('voice-player-container', { active: isSelected });
 
   return (
-    <div className='voice-player-container'>
+    <div className={voicePlayerContainerClasses} {...rest}>
       <div className={playPauseClasses}>
         <audio src={sample} ref={audio} />
         {!isPlaying && <img src={play} className={'play'} alt={'play button'} onClick={handlePlay} />}

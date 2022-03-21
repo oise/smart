@@ -1,8 +1,10 @@
 .voice {
   &-items {
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 11px;
-    row-gap: 11px;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  &-item {
+    width: 100%;
   }
 }
