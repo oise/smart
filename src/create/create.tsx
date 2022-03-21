@@ -18,7 +18,7 @@ const Create = () => {
   const navItemClasses = (value: Menu) => classNames('create-nav-item', { active: selectedMenu === value });
 
   return (
-    <>
+    <CreateSelectorProvider>
       <Header heading={'Saying Hi to my customer'}>
         <button className='button button-primary'>Save</button>
       </Header>
@@ -42,15 +42,13 @@ const Create = () => {
               Background
             </div>
           </nav>
-          <CreateSelectorProvider>
-            {selectedMenu === 'actor' && <ActorSelector />}
-            {selectedMenu === 'voice' && <VoiceSelector />}
-            {selectedMenu === 'alignment' && <AlignmentSelector />}
-            {selectedMenu === 'background' && <BackgroundSelector />}
-          </CreateSelectorProvider>
+          {selectedMenu === 'actor' && <ActorSelector />}
+          {selectedMenu === 'voice' && <VoiceSelector />}
+          {selectedMenu === 'alignment' && <AlignmentSelector />}
+          {selectedMenu === 'background' && <BackgroundSelector />}
         </div>
       </div>
-    </>
+    </CreateSelectorProvider>
   );
 };
 

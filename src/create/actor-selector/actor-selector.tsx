@@ -14,6 +14,7 @@ const ActorSelector = () => {
     const fetchActors = async () => {
       const data = await createService.actors();
       setActors(data);
+      selectActor(data[0]);
     };
 
     fetchActors();

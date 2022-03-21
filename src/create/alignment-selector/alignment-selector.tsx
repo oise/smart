@@ -1,6 +1,7 @@
 import './alignment-selector.scss';
 import { SelectedPreview, useSelector } from '../create-selector-provider';
 import classNames from 'classnames';
+import { useEffect } from 'react';
 
 const AlignmentSelector = () => {
   const { addValues, selectedValues } = useSelector();
@@ -8,6 +9,9 @@ const AlignmentSelector = () => {
   const selectAlignment = (alignment: SelectedPreview['alignment']) => {
     addValues?.('alignment', alignment);
   };
+  useEffect(() => {
+    selectAlignment('center');
+  }, []);
 
   return (
     <div className='alignment-items'>

@@ -36,7 +36,7 @@ const BackgroundSelector = () => {
             </div>
             {backgrounds?.images?.map((background) => (
               <div
-                className={`background-item ${background.url === selectedValues?.background.value ? 'active' : ''}`}
+                className={`background-item ${background?.url === selectedValues?.background?.value ? 'active' : ''}`}
                 key={background.name}
                 onClick={() => selectBackground('image', background.url)}
               >
@@ -56,7 +56,7 @@ const BackgroundSelector = () => {
           <div className='background-items'>
             {backgrounds?.colours?.map((background) => (
               <div
-                className={`background-item ${background.code === selectedValues?.background.value ? 'active' : ''}`}
+                className={`background-item ${background.code === selectedValues?.background?.value ? 'active' : ''}`}
                 key={background.name}
                 onClick={() => selectBackground('colour', background.code)}
               >
