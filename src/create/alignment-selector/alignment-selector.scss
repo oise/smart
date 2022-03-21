@@ -1,9 +1,9 @@
-@use "src/common/scss/colours";
+@use 'src/common/scss/colours';
 
-.alignment{
+.alignment {
   &-items {
     display: flex;
-    column-gap:20px;
+    column-gap: 20px;
   }
   &-item {
     display: flex;
@@ -15,12 +15,13 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    border:1px solid colours.$gray-100;
+    border: 1px solid colours.$gray-100;
     transition: border-color 200ms linear, background-color 200ms linear;
-    &:hover, &.active {
+    &:hover,
+    &.active {
       border-color: colours.$secondary;
       color: colours.$secondary;
-      background-color: lighten(colours.$secondary,50);
+      background-color: lighten(colours.$secondary, 50);
     }
   }
 }
