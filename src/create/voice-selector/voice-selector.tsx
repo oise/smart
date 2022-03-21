@@ -16,6 +16,7 @@ const VoiceSelector = () => {
     const fetchVoices = async () => {
       const data = await createService.voices();
       setVoices(data);
+      selectVoice(data[0]);
     };
 
     fetchVoices();
