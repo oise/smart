@@ -2,43 +2,43 @@
 
 .auth {
   &-background {
-    position: relative;
+    flex: 1;
+
     &:after {
       content: '';
-      position: absolute;
+      position: fixed;
       width: 400px;
-      height: 400px;
+      height: 500px;
       right: 0;
       top: 0;
       opacity: 0.2;
       background: url('src/assets/auth-image.svg') no-repeat;
+      @media (max-width: 576px) {
+        width: 40%;
+      }
     }
   }
 
   &-container {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    position: relative;
   }
 
   &-form {
-    position: absolute;
     width: 400px;
     min-height: 400px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
 
   &-button {
     display: flex;
     justify-content: center;
+    width: 100%;
     margin-top: 32px;
-
-    > button {
-      width: 78px;
-    }
   }
 
   &-meta {

@@ -1,14 +1,14 @@
 [
   {
     "name": "Asian",
-    "sample": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/audio/sample-1.mp3"
+    "sample": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/audio/sample-1.mp3"
   },
   {
     "name": "British",
-    "sample": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/audio/sample-2.mp3"
+    "sample": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/audio/sample-2.mp3"
   },
   {
     "name": "American",
-    "sample": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/audio/sample-3.mp3"
+    "sample": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/audio/sample-3.mp3"
   }
 ]
