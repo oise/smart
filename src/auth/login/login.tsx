@@ -3,7 +3,7 @@ import InputField from '@common/components/input-field';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Auth from '../auth';
 import AuthService from '../auth.service';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, MouseEvent, useState } from 'react';
 import { useLogin } from '../auth-provider';
 
 const authService = new AuthService();
@@ -35,7 +35,7 @@ const Login = (): JSX.Element => {
    * we call "login" from the Auth Provider to set a token;
    * this in turn triggers the isLoggedIn state to true
    */
-  const submit = async (event: ChangeEvent<HTMLFormElement>) => {
+  const submit = async (event: MouseEvent) => {
     event.preventDefault();
     setError(null);
     authService
