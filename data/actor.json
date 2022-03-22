@@ -1,37 +1,37 @@
 [
   {
     "name": "YoYo",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-yoyo.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-yoyo.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-yoyo.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-yoyo.png"
   },
   {
     "name": "Anna",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-anna.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-anna.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-anna.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-anna.png"
   },
   {
     "name": "May",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-may.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-may.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-may.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-may.png"
   },
   {
     "name": "Mike",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-mike.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-mike.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-mike.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-mike.png"
   },
   {
     "name": "Peter",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-peter.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-peter.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-peter.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-peter.png"
   },
   {
     "name": "Skye",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-skye.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-skype.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-skye.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-skye.png"
   },
   {
     "name": "Vincent",
-    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-thumb-vincent.png",
-    "url": "https://cdn.jsdelivr.net/gh/oise/smart@release/src/assets/actors/actor-vincent.png"
+    "thumbnailUrl": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-thumb-vincent.png",
+    "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/actors/actor-vincent.png"
   }
 ]

@@ -1,0 +1,17 @@
+.uploader {
+  &-input {
+    display: none;
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  &-image {
+    width: 40px;
+  }
+}

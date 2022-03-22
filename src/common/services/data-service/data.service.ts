@@ -1,5 +1,5 @@
 export class DataService {
-  private baseUrl = 'https://cdn.jsdelivr.net/gh/oise/smart@release/';
+  private baseUrl = 'https://cdn.jsdelivr.net/gh/oise/smart@main/';
 
   async get<Type>(url: string): Promise<Type> {
     return fetch(`${this.baseUrl}${url}`, {

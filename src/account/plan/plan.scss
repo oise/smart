@@ -1,0 +1,119 @@
+@use 'src/common/scss/colours';
+
+.plan {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    flex: 1;
+  }
+
+  &-items {
+    display: flex;
+    width: 100%;
+    column-gap: 32px;
+    row-gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    $g: &;
+    width: 260px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    @media (min-width: 576px) and (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-width: 768px) and (max-width: 1200px) {
+      width: 40%;
+    }
+
+    &-header {
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: colours.$gray-600;
+    }
+
+    &-content {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &-item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        color: colours.$gray-500;
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 21px;
+
+        > .icon-checkmark {
+          padding-right: 16px;
+
+          font-size: 8px;
+          color: colours.$accent;
+        }
+      }
+    }
+
+    &-price {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 12px;
+      font-weight: 700;
+      color: colours.$accent;
+      height: 30px;
+
+      &-currency {
+        font-size: 17px;
+        margin-bottom: 2px;
+      }
+
+      &-value {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+
+    &-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      text-align: center;
+      color: colours.$secondary;
+      background-color: lighten(colours.$secondary, 50);
+      border: 1px solid transparent;
+      font-size: 14px;
+      padding: 6px 20px;
+      transition: background-color 200ms ease-in-out;
+      min-width: 40px;
+      height: 48px;
+      border-radius: 6px;
+      cursor: pointer;
+      outline: none;
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    &.selected {
+      background-color: colours.$green;
+      pointer-events: none;
+      #{$g}-content-item,
+      #{$g}-header,
+      #{$g}-price,
+      .icon-checkmark {
+        color: #fff;
+      }
+      #{$g}-button {
+        background-color: transparent;
+        color: darken(colours.$green, 20);
+        font-size: 20px;
+      }
+    }
+  }
+}

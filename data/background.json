@@ -1,0 +1,38 @@
+{
+  "images": [
+    {
+      "name": "Office",
+      "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/backgrounds/office.jpg"
+    },
+    {
+      "name": "Space",
+      "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/backgrounds/space.jpg"
+    },
+    {
+      "name": "Noise",
+      "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/backgrounds/noise.jpg"
+    },
+    {
+      "name": "Meeting Room",
+      "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/backgrounds/meeting-room.jpg"
+    },
+    {
+      "name": "Books",
+      "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/backgrounds/books.jpg"
+    },
+    {
+      "name": "Desk",
+      "url": "https://cdn.jsdelivr.net/gh/oise/smart@main/src/assets/backgrounds/desk.jpg"
+    }
+  ],
+  "colours": [
+    {
+      "name": "Green",
+      "code": "#46b13d"
+    },
+    {
+      "name": "Lilac",
+      "code": "#3860ad"
+    }
+  ]
+}

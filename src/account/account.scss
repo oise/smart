@@ -1,0 +1,32 @@
+@use 'src/common/scss/colours';
+
+.account {
+  &-logout {
+    color: colours.$red;
+  }
+
+  &-nav {
+    max-width: 600px;
+    flex: 1;
+    display: flex;
+    font-weight: 500;
+    column-gap: 32px;
+    margin-bottom: 30px;
+
+    &-item {
+      cursor: pointer;
+      color: colours.$gray-300;
+      transition: color 250ms ease-in-out;
+
+      &:hover,
+      &.active {
+        color: colours.$secondary;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    margin-top: 45px;
+  }
+}

@@ -1,0 +1,49 @@
+@use 'src/common/scss/colours';
+
+.accordion {
+  &-head {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 200ms linear;
+    height: 62px;
+    background-color: #fff;
+    border-bottom: 1px solid colours.$gray-200;
+    font-weight: 500;
+    padding: 15px 15px 0 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    &.active {
+      background-color: lighten(colours.$secondary, 50);
+      color: colours.$secondary;
+      border-bottom-color: lighten(colours.$secondary, 50);
+    }
+
+    &.active > &-icon {
+      transform: rotate(180deg);
+      color: colours.$secondary;
+    }
+
+    &-icon {
+      text-align: center;
+      transition: transform 200ms linear;
+      transform: rotate(0deg);
+    }
+  }
+
+  &-body {
+    display: none;
+    transition: all 200ms linear;
+    background-color: #ffffff;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 0 15px 15px;
+
+    &.active {
+      display: block;
+      background-color: lighten(colours.$secondary, 50);
+    }
+  }
+}
