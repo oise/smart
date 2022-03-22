@@ -11,6 +11,7 @@
 
 html,
 body {
+  width: 100%;
   height: 100vh;
 }
 
@@ -167,7 +168,7 @@ a {
 .table {
   &-responsive {
     width: 100%;
-    margin:0 -8px;
+    margin: 0 -8px;
   }
   thead {
     text-align: left;
@@ -175,15 +176,16 @@ a {
     font-size: 14px;
     text-transform: uppercase;
     color: colours.$gray-400;
-    opacity:0.5;
+    opacity: 0.5;
   }
-  th, td {
+  th,
+  td {
     padding: 16px 8px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  tbody{
+  tbody {
     color: colours.$gray-500;
   }
 }
@@ -194,6 +196,9 @@ a {
     display: flex;
     margin-left: variables.$sidebar-width;
     padding: 0 32px;
+    width:100%;
+    min-height: 100vh;
+    min-height:100%;
 
     &-content {
       display: flex;
