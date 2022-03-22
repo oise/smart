@@ -9,5 +9,9 @@ This project use `yarn` as a dependency manager.
 
 Demo is available on Heroku at https://logan-hn.herokuapp.com/
 
-username: dummy@email.com
-password: password
+**username: dummy@email.com**
+**password: password**
+
+
+### Note
+Some required resources are hosted by jsDelivr
