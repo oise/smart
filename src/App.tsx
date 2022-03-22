@@ -14,7 +14,7 @@ const ProtectedRoute: FC<any> = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLoggedIn()) {
+    if (!isLoggedIn) {
       return navigate({ pathname: '/' });
     }
   });

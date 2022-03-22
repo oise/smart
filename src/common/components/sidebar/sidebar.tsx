@@ -11,7 +11,7 @@ const Sidebar = (): JSX.Element => {
     <div className='sidebar-container'>
       <img className='sidebar-logo' src={logo} alt='Logo' />
       <nav className='sidebar-menu'>
-        {isLoggedIn() && (
+        {isLoggedIn && (
           <>
             <div className='sidebar-menu-top'>
               <NavLink to={'create'} className={({ isActive }) => (isActive ? 'sidebar-menu-item active' : 'sidebar-menu-item')}>
