@@ -1,6 +1,13 @@
 @use 'src/common/scss/colours';
 
 .create {
+  &-button-group {
+    display: flex;
+    column-gap: 8px;
+    > .button {
+
+    }
+  }
   &-content {
     width: 740px;
     border-radius: 20px;
