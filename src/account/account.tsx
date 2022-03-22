@@ -1,6 +1,13 @@
 import './account.scss';
 import Header from '@common/components/header';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import AuthService from '../auth/auth.service';
+
+const authService = new AuthService();
+
+const logout = () => {
+  authService.logout();
+};
 
 const Account = () => {
   const { pathname } = useLocation();
@@ -8,9 +15,9 @@ const Account = () => {
   return (
     <>
       <Header heading='My Account'>
-        <NavLink className='account-logout' to='/'>
+        <div className='account-logout' onClick={logout}>
           Logout
-        </NavLink>
+        </div>
       </Header>
       <div className='layout-page-content flex column'>
         <nav className='account-nav'>

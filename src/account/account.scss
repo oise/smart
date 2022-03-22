@@ -3,6 +3,7 @@
 .account {
   &-logout {
     color: colours.$red;
+    cursor: pointer;
   }
 
   &-nav {
