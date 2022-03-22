@@ -35,7 +35,8 @@ const Login = (): JSX.Element => {
    * we call "login" from the Auth Provider to set a token;
    * this in turn triggers the isLoggedIn state to true
    */
-  const submit = async () => {
+  const submit = async (event: ChangeEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setError(null);
     authService
       .login(formValues.username, formValues.password)
@@ -73,7 +74,7 @@ const Login = (): JSX.Element => {
                 value={formValues.password}
               />
               <div className='auth-button'>
-                <button className='button button-primary' type={'button'} onClick={submit}>
+                <button className='button button-primary' onClick={submit}>
                   Login
                 </button>
               </div>

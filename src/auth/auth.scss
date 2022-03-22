@@ -12,6 +12,7 @@
       right: 0;
       top: 0;
       opacity: 0.2;
+      z-index: 91;
       background: url('src/assets/auth-image.svg') no-repeat;
       @media (max-width: 576px) {
         width: 40%;
@@ -29,6 +30,10 @@
   &-form {
     width: 400px;
     min-height: 400px;
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translate(-50%, 50%);
     @media (max-width: 576px) {
       width: 100%;
     }
