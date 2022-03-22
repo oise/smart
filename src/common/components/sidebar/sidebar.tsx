@@ -6,13 +6,12 @@ import avatar from '@assets/avatar.svg';
 
 const Sidebar = (): JSX.Element => {
   const { isLoggedIn } = useLogin();
-  console.log('isLoggedIn', isLoggedIn);
 
   return (
     <div className='sidebar-container'>
       <img className='sidebar-logo' src={logo} alt='Logo' />
       <nav className='sidebar-menu'>
-        {isLoggedIn && (
+        {isLoggedIn() && (
           <>
             <div className='sidebar-menu-top'>
               <NavLink to={'create'} className={({ isActive }) => (isActive ? 'sidebar-menu-item active' : 'sidebar-menu-item')}>

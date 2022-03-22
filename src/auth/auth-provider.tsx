@@ -1,18 +1,19 @@
-import { createContext, FC, useContext, useState } from 'react';
+import { createContext, FC, useContext } from 'react';
 
 export interface AuthContextValue {
-  isLoggedIn?: boolean;
+  isLoggedIn: () => boolean;
   login?: (value: string) => void;
 }
 
-const AuthContext = createContext<AuthContextValue>({ isLoggedIn: false });
+const AuthContext = createContext<AuthContextValue>({ isLoggedIn: () => false });
 
 export const AuthProvider: FC = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-
   const login = (token: string) => {
     localStorage.setItem('token', token);
-    setIsLoggedIn(true);
+  };
+
+  const isLoggedIn = (): boolean => {
+    return !!localStorage.getItem('token');
   };
 
   const contextValue: AuthContextValue = {
