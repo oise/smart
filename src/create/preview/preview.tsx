@@ -6,7 +6,7 @@ const Preview = () => {
 
   return (
     <div className='preview-container'>
-      <img src={selectedValues?.actorImage} alt='actor preview image' />
+      <img className='preview-image' src={selectedValues?.actorImage} alt='actor preview image' />
     </div>
   );
 };

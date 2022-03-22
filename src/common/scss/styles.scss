@@ -61,9 +61,6 @@ h1,
   font-weight: 500;
   font-size: variables.$heading-1-size;
   line-height: variables.$heading-1-size;
-  @media (max-width: 576px) {
-    font-size: 90%;
-  }
 }
 
 a {
@@ -207,6 +204,7 @@ a {
       padding-top: 132px;
     }
     @media (max-width: 576px) {
+      margin-left: variables.$sidebar-width-mobile;
       width: auto;
     }
   }

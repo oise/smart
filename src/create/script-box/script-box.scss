@@ -3,11 +3,12 @@
 .script {
   &-container {
     background: #fff;
-    border-radius: 20px;
+    border-radius: inherit;
     padding: 16px 32px;
+    height: 200px;
     > textarea {
       width: 100%;
-      min-height: 150px;
+      height: calc(100% - 50px);
       resize: none;
       background-color: transparent;
       border: none;
@@ -25,5 +26,12 @@
   }
   &-counter {
     font-size: 10px;
+  }
+
+  @media (max-width: 576px) {
+   &-container {
+     height: 150px;
+     padding: 8px 16px;
+   }
   }
 }
