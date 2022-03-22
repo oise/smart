@@ -35,7 +35,9 @@
     left: 50%;
     transform: translate(-50%, 50%);
     @media (max-width: 576px) {
-      width: 100%;
+      width: 240px;
+      right: 0;
+      left: 60%;
     }
   }
 
