@@ -1,7 +1,7 @@
 @use 'src/common/scss/colours';
 
 .create {
-  &-container{
+  &-container {
     display: flex;
     @media (max-width: 576px) {
       flex-direction: column;

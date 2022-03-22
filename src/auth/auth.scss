@@ -14,7 +14,7 @@
       opacity: 0.2;
       background: url('src/assets/auth-image.svg') no-repeat;
       @media (max-width: 576px) {
-          width: 40%;
+        width: 40%;
       }
     }
   }
@@ -24,11 +24,10 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-
   }
 
   &-form {
-    width:400px;
+    width: 400px;
     min-height: 400px;
     @media (max-width: 576px) {
       width: 100%;
