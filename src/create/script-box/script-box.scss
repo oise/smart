@@ -13,7 +13,7 @@
       border: none;
       outline: none;
       &::placeholder {
-       color: lighten(colours.$gray-300, 10)
+        color: lighten(colours.$gray-300, 10);
       }
     }
   }

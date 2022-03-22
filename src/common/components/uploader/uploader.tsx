@@ -1,11 +1,11 @@
 import './uploader.scss';
 import uploadImg from '/src/assets/upload.svg';
-import { useRef, VFC } from 'react';
+import { ChangeEventHandler, useRef, VFC } from 'react';
 import classNames from 'classnames';
 
 interface UploaderProps {
   className?: string;
-  onChange?: () => void;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 const Uploader: VFC<UploaderProps> = ({ className, onChange, ...rest }) => {

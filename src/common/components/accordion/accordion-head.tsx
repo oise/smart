@@ -29,7 +29,6 @@ export const AccordionHead: FC<AccordionHeadProps> = ({ children, id, onClick, .
   return (
     <div
       className={accordionHeadClasses}
-      tabIndex={0}
       id={`accordion-${id || index}`}
       key={`header-${index}`}
       onClick={handleClick}
@@ -39,7 +38,7 @@ export const AccordionHead: FC<AccordionHeadProps> = ({ children, id, onClick, .
       {...rest}
     >
       <div>{children}</div>
-      <div className={'accordion-head-icon'} />
+      <div className='accordion-head-icon icon-arrow' />
     </div>
   );
 };

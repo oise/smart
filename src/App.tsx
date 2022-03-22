@@ -6,6 +6,10 @@ const Login = lazy(() => import('./auth/login'));
 const Signup = lazy(() => import('./auth/signup'));
 const Browse = lazy(() => import('./browse'));
 const Create = lazy(() => import('./create'));
+const Account = lazy(() => import('./account'));
+const Profile = lazy(() => import('./account/profile'));
+const Plan = lazy(() => import('./account/plan'));
+const Billing = lazy(() => import('./account/billing'));
 
 function App() {
   return (
@@ -43,6 +47,47 @@ function App() {
             </Suspense>
           }
         />
+        <Route
+          path='/account'
+          element={
+            <Suspense fallback={null}>
+              <Account />
+            </Suspense>
+          }
+        >
+          <Route
+            index
+            element={
+              <Suspense fallback={null}>
+                <Profile />
+              </Suspense>
+            }
+          />
+          <Route
+            path={'profile'}
+            element={
+              <Suspense fallback={null}>
+                <Profile />
+              </Suspense>
+            }
+          />
+          <Route
+            path={'plan'}
+            element={
+              <Suspense fallback={null}>
+                <Plan />
+              </Suspense>
+            }
+          />
+          <Route
+            path={'billing'}
+            element={
+              <Suspense fallback={null}>
+                <Billing />
+              </Suspense>
+            }
+          />
+        </Route>
       </Route>
     </Routes>
   );

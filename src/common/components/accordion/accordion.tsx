@@ -7,9 +7,7 @@ import { AccordionProvider } from './accordion-provider';
 const Accordion: FC<AccordionProps> = ({ children, toggle, defaultIndex, ...rest }) => {
   return (
     <AccordionProvider toggle={toggle} defaultIndex={defaultIndex}>
-      <div tabIndex={0} {...rest}>
-        {children}
-      </div>
+      <div {...rest}>{children}</div>
     </AccordionProvider>
   );
 };
