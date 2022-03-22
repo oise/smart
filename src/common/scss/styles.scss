@@ -11,6 +11,7 @@
 
 html,
 body {
+  width: 100%;
   height: 100vh;
 }
 
@@ -41,12 +42,15 @@ body {
 .icon-checkmark:before {
   content: '\e903';
 }
+
 .icon-arrow:before {
   content: '\e902';
 }
+
 .icon-saved-videos:before {
   content: '\e900';
 }
+
 .icon-select-video:before {
   content: '\e901';
 }
@@ -144,6 +148,7 @@ a {
   &-secondary {
     background-color: colours.$secondary;
     color: #fff;
+
     &:hover {
       background-color: darken(colours.$secondary, 10);
     }
@@ -152,6 +157,7 @@ a {
   &-neutral {
     background-color: colours.$gray-100;
     color: colours.$gray-300;
+
     &:hover {
       background-color: darken(colours.$gray-100, 10);
     }
@@ -160,50 +166,27 @@ a {
 
 //TABLES
 .table {
-  &-header {
-    //color: colours.$font-color;
-    padding: 14px;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 90%;
-
-    @media screen and (max-width: 480px) {
-      display: none;
-    }
+  &-responsive {
+    width: 100%;
+    margin: 0 -8px;
   }
-
-  &-body {
-    min-height: 600px;
-
-    .table-row {
-      width: 100%;
-      border-radius: 5px;
-      align-items: center;
-      height: 64px;
-      line-height: 64px;
-      padding: 0 16px;
-
-      .table-item {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding-right: 2px;
-        position: relative;
-
-        .featured {
-          display: inline-block;
-          color: colours.$secondary;
-          width: 20px;
-          position: relative;
-          top: 1px;
-        }
-
-        &.no-overflow {
-          overflow: unset;
-        }
-      }
-    }
+  thead {
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: colours.$gray-400;
+    opacity: 0.5;
+  }
+  th,
+  td {
+    padding: 16px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  tbody {
+    color: colours.$gray-500;
   }
 }
 
@@ -211,11 +194,15 @@ a {
 .layout {
   &-page {
     display: flex;
-    flex: 1;
     margin-left: variables.$sidebar-width;
     padding: 0 32px;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100%;
+
     &-content {
       display: flex;
+      flex: 1;
       padding-top: 132px;
     }
   }
@@ -226,9 +213,11 @@ a {
 .flex {
   display: flex;
   flex: 1;
+
   &.column {
     flex-direction: column;
   }
+
   &.row {
     flex-direction: row;
   }
