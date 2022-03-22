@@ -5,23 +5,27 @@
     display: flex;
     @media (max-width: 576px) {
       flex-direction: column;
-      padding-right: 16px;
     }
   }
+
   &-button-group {
     display: flex;
     column-gap: 8px;
+
     > .button {
     }
   }
+
   &-content {
     width: 740px;
+    height: 650px;
     border-radius: 20px;
     background-color: colours.$gray-200;
     overflow: hidden;
     padding: 20px;
     @media (max-width: 576px) {
       width: 100%;
+      overflow: visible;
     }
   }
 
@@ -31,18 +35,15 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    @media (max-width: 576px) {
-      margin-left: 0;
-      margin-top: 32px;
-      width: 100%;
-    }
 
     &-items {
       display: flex;
+      flex-wrap: wrap;
       font-weight: 500;
       column-gap: 32px;
       margin-bottom: 30px;
     }
+
     &-item {
       cursor: pointer;
       color: colours.$gray-300;
@@ -52,6 +53,14 @@
       &.active {
         color: colours.$secondary;
       }
+    }
+  }
+
+  @media (max-width: 576px) {
+    &-nav {
+      margin-left: 0;
+      margin-top: 32px;
+      width: 100%;
     }
   }
 }

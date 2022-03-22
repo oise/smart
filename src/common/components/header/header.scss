@@ -15,4 +15,15 @@
       border-bottom: 2px solid colours.$gray-200;
     }
   }
+
+  @media (max-width: 576px) {
+    &-container {
+      width: calc(100% - variables.$sidebar-width-mobile - 64px);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      row-gap: 8px;
+      padding-top: 16px;
+    }
+  }
 }
