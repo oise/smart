@@ -1,0 +1,44 @@
+@use 'src/common/scss/colours';
+
+.create-name {
+  &-heading {
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    &-icon {
+      cursor: pointer;
+      font-size: 12px;
+      display: block;
+      text-align: center;
+      font-weight: normal;
+    }
+  }
+  &-form {
+    max-width: 722px;
+    &-input {
+      max-width: 100%;
+      width: 324px;
+      border: none;
+      border-bottom: 1px solid colours.$secondary;
+      outline: none;
+      font-size: 22px;
+      padding: 5px 0;
+      font-weight: 500;
+      color: colours.$secondary;
+    }
+    &-subtext {
+      margin-top: 32px;
+      line-height: 22px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid colours.$gray-200;
+    }
+    &-tags {
+      display: flex;
+      column-gap: 6px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+  }
+}

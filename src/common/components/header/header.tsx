@@ -1,10 +1,10 @@
 import './header.scss';
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 
 interface HeaderProps {
   showBorder?: boolean;
-  heading: string;
+  heading: string | ReactElement;
 }
 
 const Header: FC<HeaderProps> = ({ children, showBorder = true, heading }) => {
