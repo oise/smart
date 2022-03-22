@@ -1,7 +1,28 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Layout } from '@common/components/layout';
-import { lazy, Suspense } from 'react';
+import { FC, lazy, Suspense, useEffect } from 'react';
+import { useLogin } from './auth/auth-provider';
 
+/**
+ * HOC to allow access to pages with
+ * proper authorization
+ * @param children
+ * @constructor
+ */
+const ProtectedRoute: FC<any> = ({ children }) => {
+  const { isLoggedIn } = useLogin();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoggedIn()) {
+      return navigate({ pathname: '/' });
+    }
+  });
+
+  return children;
+};
+
+// Component Routes
 const Login = lazy(() => import('./auth/login'));
 const Signup = lazy(() => import('./auth/signup'));
 const Browse = lazy(() => import('./browse'));
@@ -35,7 +56,9 @@ function App() {
           path='/browse'
           element={
             <Suspense fallback={null}>
-              <Browse />
+              <ProtectedRoute>
+                <Browse />
+              </ProtectedRoute>
             </Suspense>
           }
         />
@@ -43,7 +66,9 @@ function App() {
           path='/create'
           element={
             <Suspense fallback={null}>
-              <Create />
+              <ProtectedRoute>
+                <Create />
+              </ProtectedRoute>
             </Suspense>
           }
         />
@@ -51,7 +76,9 @@ function App() {
           path='/account'
           element={
             <Suspense fallback={null}>
-              <Account />
+              <ProtectedRoute>
+                <Account />
+              </ProtectedRoute>
             </Suspense>
           }
         >
